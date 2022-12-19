@@ -1,0 +1,23 @@
+//A recursive function prototype
+
+int recursiveFunction(int n){
+    
+    //n will be the base case
+    //if our input is 0, then the recursion will terminate
+    if(n == 0){
+        
+    //Return 1, because when factorial hits 1! equals 1
+        return 1;
+    }else{
+    // n * (n-1)
+        return n* recursiveFunction(n - 1);
+    }
+}
+
+int main(){
+    int i;
+    
+    printf("Give me a number: \n");
+    scanf("%d", &i);
+    printf("The recursion is: %d", recursiveFunction(i));
+}
